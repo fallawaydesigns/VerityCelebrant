@@ -1,0 +1,531 @@
+*,
+*::before,
+**::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-white: rgb(255, 247, 249);
+  --color-light: rgba(171, 171, 212, 0.185);
+  --primary-color: rgb(192, 169, 192);
+  --color-black: rgba(14, 12, 12, 0.87);
+  --color-background: rgb(228,240,251);
+}
+
+html {
+  scroll-behavior: smooth;
+  
+}
+
+body {
+  margin: 1em;
+  line-height: 1.5;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.1rem;
+  color: var(--color-black);
+  font-size: 62.5%;
+}
+
+.wrapper {
+    max-width: 90rem;
+    margin: 1em auto; 
+    border-left: 1px var(--color-background) solid;
+    border-right: 1px var(--color-background) solid;
+   }
+
+// ***FONTS***//
+
+.hero,
+.service {
+  padding: 0.5em 0.5em;
+}
+
+h1 {
+  font-size: calc(clamp(2rem, 1.6rem + 3vw, 4rem));
+  padding: 1em 0 1em 0;
+  margin: .5em;
+}
+
+h2 {
+  font-size: calc(clamp(2.5rem, 2.4rem + 0.5vw, 3rem));
+  text-align: center;
+  margin: 0;
+}
+
+h3{
+  font-size: calc(clamp(1.5rem, 1.33rem + 0.8vw, 2.2rem));
+  padding-top: 0.5em;
+}
+
+
+
+p {
+  font-size: 1.2rem;
+  text-align: left;
+  display: grid;
+  padding-bottom: 0.5em;
+}
+
+cite {
+  font-weight: bold;
+  align-self: flex-end;
+  text-align-last: right;
+  font-size: clamp(1rem, 0.25vh, 1.2rem);
+  padding: 1em;
+  }
+
+q {
+  font-style: italic;
+  font-size: 1.5em;
+  padding: 1em 1em 0 1em;
+}
+
+// NAV BAR//
+
+.navbar {
+  color: black;
+  border-radius: 15px;
+  margin: 1em;
+  top: 0;
+  align-self: flex-start;
+  font-size: 1.5em;
+  
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 1em 0 0;
+}
+
+nav {
+  display: none;
+}
+
+.nav-container {
+  display: flex;
+  place-content: space-between;
+  margin: 0 2em;
+}
+
+.mobile-menu {
+  cursor: pointer;
+  // Make icon image and bigger....*****
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+//***STYLING**//
+
+.hero {
+  text-align: center;
+  padding-top: 2em;
+  background-color: var(--color-background);
+ clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); 
+}
+
+  //**BUTTONS***//
+
+  .cta { margin: 2em 0 3em 0;}
+
+  .cta a {
+    background: var(--primary-color);
+    color: white;
+    margin: 1em 0 2.5em 0;
+    text-decoration: none;
+    padding: 0.6em 1.3em;
+    font-size: 1.2rem;
+    border-radius: 5em;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 0.2em var(--color-black, 0.2);
+      transform: translateY(3px);
+    }
+  }
+
+
+//***MAIN BODY STYLING***//
+
+.hero-logo img {
+  height: 15em;
+  margin-top: 5em;
+}
+
+.quote {padding-top: 2em;
+  font-size: (1.2rem);
+}
+
+.content h3 {font-style: italic;}
+
+.image {
+  display: block;
+  max-width: 50vw;
+  border-radius: 2%;
+  margin: 0 auto;
+}
+
+.container, 
+.testimonials {
+  margin-top: 2em;
+}
+
+.testimonials {
+  padding-top: 2em;
+}
+
+.content {
+  padding: 4em 3em 4em 3em;
+}
+
+.weddings {
+  background-color: var(--color-background);
+  
+}
+
+
+//testiminonial//
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5em;
+  padding: 8em 1em 8em 1em;
+}
+
+
+.testimonials {
+ background-image: linear-gradient(to bottom, rgba(white, 0.7), rgba(rgb(255, 255, 255), 0.8)), url('/css/image/tree.jpg');
+      background-size: cover;
+      background-position: center;
+           background-attachment: fixed;
+      position: relative;
+      
+}
+
+//ABOUT ME//
+
+.about-content{ padding-top: 4em;}
+
+.about-grid {
+  display: grid;
+  gap: 1.5em;
+  padding: 1em;
+}
+
+.about-text {
+  display: grid;
+  
+  & img {
+    
+    max-height: 50vh;
+    align-self: center;
+    justify-self: center;
+    border-radius: 2%;
+  }
+}
+
+.grid-text {
+  display: grid;
+  
+  margin: 1em;
+  border: solid rgba(0, 0, 0, 0.306) 2px;
+  border-radius: 2%;
+  background-color: rgb(254, 253, 253); /* Fallback color */
+  background-color: rgba(255, 254, 254, 0.6); /* Black w/opacity/see-through */
+}
+
+.quote-img {
+  height: 25px;
+  width: auto;
+}
+
+//***NAV Bar*** MOBILE MENU//
+
+nav.menu-btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 30%;
+  right: 0;
+  top: 0;
+  background: (var(--primary-color));
+  height: 35vh;
+  padding: 1em;
+  border-radius: 5%;
+
+  ul.primary-nav {
+    margin-top: 5em;
+  }
+
+  li {
+    a {
+      color: var(--color-white);
+      text-decoration: none;
+      display: block;
+      // font-size: 1.3em;
+      text-align: left;
+      padding: 0 1em 1em 0;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: 0.5em;
+  cursor: pointer;
+  color: var(--color-white);
+}
+
+
+
+
+
+//FOOTER***//
+
+.contact {
+  background-color: var(--color-background);
+  clip-path: polygon(0 41%, 100% 10%, 100% 100%, 0% 100%);
+  padding-top: 5em;
+  
+  
+  & h3 {
+    padding-top: 5em;
+    text-align: center;
+  }
+}
+
+
+.social-links {
+  display: grid;
+  justify-content: center;
+  background: none;
+  position: unset;
+  height: auto;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.5em;
+  padding-top: 5em;
+  
+
+  ul {
+    display: grid;
+  }
+
+  li,
+  p {
+    text-align: center;
+    font-size: 1rem;
+    margin: 1em;
+
+    img {
+      height: 3rem;
+      width: min-content;
+    }
+  }
+}
+
+
+// //NAV FOR MEDIUM SCREEN/
+@media only screen and (min-width: 768px) {
+.hero {
+  background-color: var(--color-background);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); 
+  
+  & h1 {
+  padding: 4rem 0 1em 0;
+  }
+
+  & li {
+    padding: 4em 0 10em 0;
+  }
+}
+
+.content {
+  padding: 5em 3em 5em 3em;
+}
+
+.testimonials {
+  margin-top: 5em;
+  
+  & h2 {padding-top: 2em;}
+}
+
+
+//Testimonial grid container//
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5em;
+  padding: 8em 1em 8em 1em;
+}
+
+}
+
+
+@media only screen and (min-width: 821px) {
+
+h1 {
+  padding-top: 2em;
+  margin-bottom: 0;
+}
+
+.hero-logo img {
+  height: 25em;
+}
+
+//NAV//
+
+  .mobile-menu,
+  .mobile-menu-exit {
+    display: none;
+  }
+
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+  }
+
+  .navbar nav {
+    
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+
+    ul {
+      display: flex;
+    }
+
+    a {
+      color: #9e4c4c;
+      font-weight: 400;
+      font-size: clamp(1.2rem, 0.2vh, 1.5rem);
+      padding: 0.1em 1em;
+      text-decoration: none;
+    }
+
+    ul.primary-nav {
+      margin: 0;
+      align-items: center;
+    }
+
+    li.current a {
+      font-weight: bold;
+    }
+  }
+
+//HERO FOR LARGE SCREEN//
+
+  .hero-img {
+    display: none;
+  }
+
+  .hero {
+    background-image:linear-gradient(to bottom, rgba(white, 0.6), rgba(228,240,251, 0.8)),url(../css/image/background.jpg);
+      background-size:cover;
+      background-position:center;
+      height:95vh;
+      background-attachment:fixed;
+      position:relative;
+      clip-path:polygon(0 0, 100% 0, 100% 85%, 0% 100%); 
+}
+
+
+
+// .cta {
+//   margin-top: 2em;
+// }
+
+//GRID FOR LARGE SCREEN//
+
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 3em;
+  margin: 2em 0 2.5em 0;
+}
+
+.image {
+  opacity: .8;
+  background-color: black;
+  max-height: 100%;
+  border-radius: 2%;
+  width: 100%;
+  object-fit: cover;
+  align-self: center;
+  max-width: 40rem;
+}
+
+//  .text {
+//   padding-left: 1em;
+// }
+
+//ABOUT ME LARGE SCREEN//
+.grid-col-span-2 {
+  grid-column: span 2;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-inline: auto;
+  gap: 1.5em;
+  padding: 1em;
+}
+
+
+
+.about-text {
+  display: grid;
+  
+  & img {
+    
+    max-height: 40vh;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+.about-text:nth-child(2) {
+  grid-row: 2;
+  grid-column: span 3;
+}
+
+}
+
+
+@media only screen and (min-width: 1124px) {
+
+  .hero h1 {padding: 1em 0 0 0;}
+
+
+  .image {
+    opacity: .8;
+    background-color: black;
+    max-height: 100%;
+    border-radius: 2%;
+    width: 100%;
+    object-fit: cover;
+    align-self: center;
+    max-width: 30rem;
+  }
+
+}
